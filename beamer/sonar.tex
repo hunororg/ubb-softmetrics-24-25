@@ -198,7 +198,12 @@
 \section[How SonarCloud Works]{How SonarCloud Works}
 
 \begin{frame}{Static Code Analysis}
-  
+  \begin{itemize}
+    \item \textbf{Abstract Syntax Tree (AST) Parsing}: Builds a tree representation of code structure to analyze syntax and detect patterns.
+    \item \textbf{Semantic Analysis}: Examines variable types, scope, and relationships between code elements to find issues like null references.
+    \item \textbf{Pattern Matching with Rules}: Applies over 500 built-in rules for each language to flag common errors and risky coding patterns.
+    \item \textbf{Dependency Traversal}: Analyzes code dependencies to detect unused code, duplicate functions, and inter-file issues.
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Quality Gates}
