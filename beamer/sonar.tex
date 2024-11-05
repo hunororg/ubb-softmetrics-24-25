@@ -265,6 +265,25 @@
  
 \end{frame}
 
+\section[ Integration with GitHub and CI/CD Pipelines]{Integration with GitHub and CI/CD Pipelines}
+
+\begin{frame}{Setting Up SonarCloud in GitHub}
+  
+  \begin{enumerate}
+    \item Sign up for a SonarCloud account and link it to your GitHub account.
+    \item Create a new project in SonarCloud and select your GitHub repository for analysis.
+    \item Allow SonarCloud to read and access your repository.
+    \item In SonarCloud, generate a \small{\textit{SONAR\_TOKEN}} \normalsize for authentication.
+    \item Add the token in the github secrets.
+    \item Create a GitHub workflow with sonar-scanner step and add the secret.
+    \item Create a pull request to trigger the workflow and initiate analysis.
+  \end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Basic Pipeline Configuration}
+ 
+\end{frame}
 
 \section[SonarCloud in Action]{SonarCloud in Action}
 
@@ -278,16 +297,5 @@
 \begin{frame}{Live Demo}
  
 \end{frame}
-
-\section[ Integration with GitHub and CI/CD Pipelines]{Integration with GitHub and CI/CD Pipelines}
-
-\begin{frame}{Setting Up SonarCloud in GitHub}
- 
-\end{frame}
-
-\begin{frame}{Basic Pipeline Configuration}
- 
-\end{frame}
-
 
 \end{document}
