@@ -12,6 +12,7 @@ gradle/
 *.bbl
 *.blg
 !presentation/*.pdf
+!sonar.pdf
 *.nav
 *.out
 *.snm
