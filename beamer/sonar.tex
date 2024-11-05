@@ -171,14 +171,17 @@
       \begin{itemize}
           \item ABAP, C, C++, C\#, Dart, Go, Java, JavaScript, Kotlin, PHP, Python, Ruby, Swift, TypeScript
       \end{itemize}
+      \vspace*{0.5em}
         \item \textbf{Markup and Configuration:}
       \begin{itemize}
         \item CSS, SCSS, Less, style inside PHP/HTML/VueJS, HTML, XML
       \end{itemize}
+      \vspace*{0.5em}
       \item \textbf{Infrastructure \& Platforms:}
       \begin{itemize}
         \item Ansible, Azure Resource Manager, CloudFormation, Docker, Kubernetes/Helm, Terraform
       \end{itemize}
+      \vspace*{0.5em}
       \item \textbf{Enterprise Languages:}
       \begin{itemize}
         \item Apex, COBOL, PLI, RPG
@@ -232,7 +235,31 @@
 
 \section[SonarCloud in Action]{SonarCloud in Action}
 
-\begin{frame}{Example Workflow}
+\begin{frame}[fragile]{Example Workflow}
+
+  \begin{verbatim}
+    on:
+      push:
+        branches:
+          - main
+    jobs:
+      sonarcloud:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v3
+          - name: Set up JDK
+            uses: actions/setup-java@v3
+          - name: Run SonarCloud Scan
+            env:
+              SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Make sure to add this token to your GitHub Secrets
+            run: |
+              sonar-scanner \
+                -Dsonar.projectKey=my_project_key \
+                -Dsonar.organization=my_organization_key \
+                -Dsonar.host.url=https://sonarcloud.io \
+                -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+  \end{verbatim}
 
 \end{frame}
 
