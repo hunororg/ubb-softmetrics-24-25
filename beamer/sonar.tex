@@ -106,6 +106,7 @@
 \begin{frame}{Importance of Code Quality}
   \begin{itemize}
     \item \textbf{Enhances Code Maintainability}: Ensures code is clean and structured, making future modifications easier.
+    \vspace*{1em}
     \item \textbf{Prevents Technical Debt}: Identifies potential issues early to avoid accumulating maintenance burdens.
   \end{itemize}
   % \begin{tikzpicture}[remember picture, overlay]
@@ -119,6 +120,7 @@
 \begin{frame}{Importance of Code Quality}
   \begin{itemize}
     \item \textbf{Reduces Defects and Bugs}: Early detection of code issues minimizes the chance of runtime errors.
+    \vspace*{1em}
     \item \textbf{Improves Team Collaboration}: Sets a standard for quality, enabling consistent and effective code reviews.
   \end{itemize}
 \end{frame}
@@ -133,6 +135,7 @@
 \begin{frame}{Security Benefits}
   \begin{itemize}
     \item \textbf{Vulnerability Detection}: Sonar identifies security vulnerabilities and potential exploits in your code, helping prevent data breaches and security incidents.
+    \vspace*{1em}
     \item \textbf{OWASP Compliance}: Ensures code adheres to recognized security standards like OWASP Top 10, promoting industry-level security practices.
     % \item \textbf{Continuous Monitoring}: Provides ongoing code analysis in real-time, allowing teams to detect and fix security issues during development.
   \end{itemize}
@@ -153,7 +156,9 @@
 \begin{frame}{Development Best Practices}
   \begin{itemize}
     \item \textbf{Code Smell Detection}: Highlights suboptimal code structures that could lead to future maintenance problems.
+    \vspace*{0.75em}
     \item \textbf{Enforces Coding Standards}: Automates the application of style and quality guidelines, ensuring consistency across the codebase.
+    \vspace*{0.75em}
     \item \textbf{Automated Quality Gates}: Sets pass/fail criteria for code quality, allowing only compliant code to merge into main branches, maintaining high development standards.
   \end{itemize}
 \end{frame}
@@ -235,31 +240,7 @@
 
 \section[SonarCloud in Action]{SonarCloud in Action}
 
-\begin{frame}[fragile]{Example Workflow}
-
-  \begin{verbatim}
-    on:
-      push:
-        branches:
-          - main
-    jobs:
-      sonarcloud:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout code
-            uses: actions/checkout@v3
-          - name: Set up JDK
-            uses: actions/setup-java@v3
-          - name: Run SonarCloud Scan
-            env:
-              SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Make sure to add this token to your GitHub Secrets
-            run: |
-              sonar-scanner \
-                -Dsonar.projectKey=my_project_key \
-                -Dsonar.organization=my_organization_key \
-                -Dsonar.host.url=https://sonarcloud.io \
-                -Dsonar.login=${{ secrets.SONAR_TOKEN }}
-  \end{verbatim}
+\begin{frame}{Example Workflow}
 
 \end{frame}
 
