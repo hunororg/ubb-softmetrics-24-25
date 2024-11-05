@@ -181,16 +181,31 @@
 \section[How SonarCloud Works]{How SonarCloud Works}
 
 \begin{frame}{Static Code Analysis}
-  % \begin{tikzpicture}[remember picture, overlay]
-  %   \node[right=4.02em] at (current page.185)
-  %   {
-  %     \includegraphics[width=1.09\textwidth]{fig/image.png}
-  %   };
-  % \end{tikzpicture}
+  
 \end{frame}
 
 \begin{frame}{Quality Gates}
- 
+  \begin{itemize}
+    \item \textbf{Definition:}
+    \begin{itemize}
+      \item Quality Gates are a set of conditions that determine whether code meets predefined quality standards.
+    \end{itemize}
+
+    \vspace*{1em}
+
+    \item \textbf{Key Metrics:}
+    \begin{itemize}
+        \item \textbf{Coverage}: Enforces sufficient test coverage.
+        \item \textbf{Bugs/Vulnerabilities}: Blocks critical issues.
+        \item \textbf{Code Smells}: Prevents maintainability problems.
+        \item \textbf{Duplications}: Limits duplicate code.
+    \end{itemize}
+    
+    \vspace*{1em}
+
+    \item \textbf{Outcome:}
+    Pass/fail check to ensure high code standards are met.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Dashboard and Reports}
