@@ -11,8 +11,7 @@ gradle/
 *.synctex.gz
 *.bbl
 *.blg
-!presentation/*.pdf
-!sonar.pdf
+!beamer/*.pdf
 *.nav
 *.out
 *.snm
